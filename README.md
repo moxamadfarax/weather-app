@@ -9,4 +9,4 @@ I built his poject in order to get more used to working with web api's.
 I learned how to fetch and store data using pull requests.
 This app allows you to view the weather forecast of the city you enter.
 
-(images/screenshot.png)
+![Getting Started](images/screenshot.png)
