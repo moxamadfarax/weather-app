@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/reset.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap"
-      rel="stylesheet"
-    />
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
   </head>
   <body>
     <header>
@@ -36,24 +35,27 @@
           </li>
          <br>
          <br>
-          <li></li>
-          <div id ="history-list">
-
+          <li>
+          </li>
+          <div class = "history-list "id ="history-list">
           </div>
-          <br />
         </ul>
       </div>
+      <div class="delete-btn-style" id="delete-btn-pst">
+          <button class = "delete-btn hidden">Reset History</button>
+        </div>
+      <!--First Card Above-->
       <div class="card-top-row-2">
         <ul class="card-2-ul">
           <li>
             <h2 id="current-date"></h2>
           </li>
           <br />
-          <li><img src="" id = "icon" alt="weather-icon" class="icon"></i></li><br />
+          <li><img src="" id = "icon" alt="weather-icon" class="icon"></i></li>
           <li>
             <h2 id="city-name"></h2>
           </li>
-          <br /><br />
+          <br /><br /><br>
           <li>
             <h3 id = "temperature"></h3>
           </li>
@@ -79,24 +81,22 @@
           </li>
           <br />
           <li>
-            <img src="" id = "icon-1"alt="weather-icon" class="icon"></i>
+            <img src="" id = "icon-1" alt="weather-icon" class="icon">
           </li><br />
           <li>
             <h2 ></h2>
           </li>
-          <br /><br />
           <li>
             <h3 id="temperature-1"></h3>
           </li>
-          <br /><br />
+          <br><br><br><br>
           <li>
             <h3 id="wind-speed-1"></h3>
           </li>
-          <br /><br />
+          <br><br><br><br>
           <li>
             <h3 id="humidity-1"></h3>
           </li>
-          <br /><br />
         </ul>
       </div>
       <div class="cards-bottom-row">
@@ -106,25 +106,23 @@
           </li>
           <br />
           <li>
-            <img src="" id = "icon-2"alt="weather-icon" class="icon"></i>
+            <img src="" id = "icon-2" alt="weather-icon" class="icon">
           </li>
           <br />
           <li>
             <h2 ></h2>
           </li>
-          <br /><br />
           <li>
             <h3 id="temperature-2"></h3>
           </li>
-          <br /><br />
+          <br><br><br><br>
           <li>
             <h3 id="wind-speed-2"></h3>
           </li>
-          <br /><br />
+          <br><br><br><br>
           <li>
             <h3 id="humidity-2"></h3>
           </li>
-          <br /><br />
         </ul>
       </div>
       <div class="cards-bottom-row">
@@ -134,24 +132,22 @@
           </li>
           <br />
           <li>
-            <img src="" id = "icon-3"alt="weather-icon" class="icon"></i>
+            <img src="" id = "icon-3" alt="weather-icon" class="icon">
           </li><br />
           <li>
             <h2 ></h2>
           </li>
-          <br /><br />
           <li>
             <h3 id="temperature-3"></h3>
           </li>
-          <br /><br />
+          <br><br><br><br>
           <li>
             <h3 id="wind-speed-3"></h3>
           </li>
-          <br /><br />
+          <br><br><br><br>
           <li>
             <h3 id="humidity-3"></h3>
           </li>
-          <br /><br />
         </ul>
       </div>
       <div class="cards-bottom-row">
@@ -160,23 +156,21 @@
             <h2 id="date-4"></h2>
           </li>
           <br />
-          <li><img src="" id = "icon-4"alt="weather-icon" class="icon"></i></li><br />
+          <li><img src="" id = "icon-4" alt="weather-icon" class="icon"></li><br />
           <li>
             <h2 ></h2>
           </li>
-          <br /><br />
           <li>
             <h3 id="temperature-4"></h3>
           </li>
-          <br /><br />
+          <br><br><br><br>
           <li>
             <h3 id="wind-speed-4"></h3>
           </li>
-          <br /><br />
+          <br><br><br><br>
           <li>
             <h3 id="humidity-4"></h3>
           </li>
-          <br /><br />
         </ul>
       </div>
       <div class="cards-bottom-row">
@@ -186,27 +180,26 @@
           </li>
           <br />
           <li>
-            <img src="" id = "icon-5"alt="weather-icon" class="icon"></i>
+            <img src="" id = "icon-5"alt="weather-icon" class="icon">
           </li><br />
           <li>
             <h2 ></h2>
           </li>
-          <br /><br />
           <li>
             <h3 id="temperature-5"></h3>
           </li>
-          <br /><br />
+          <br><br><br><br>
           <li>
             <h3 id="wind-speed-5"></h3>
           </li>
-          <br /><br />
+          <br><br><br><br>
           <li>
             <h3 id="humidity-5"></h3>
           </li>
-          <br /><br />
+          <br><br><br><br>
         </ul>
       </div>
     </section>
-    <script src="script.js"></script>
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>

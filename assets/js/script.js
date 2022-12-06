@@ -3,6 +3,7 @@ var inputField = document.getElementById("input");
 var submitBtn = document.getElementById("submit-btn");
 var historylist = document.getElementById("history-list");
 var currentDateEl = document.getElementById("current-date");
+var deleteBtnPos = document.getElementById("delete-btn-pst");
 var date1 = document.getElementById("date-1");
 var date2 = document.getElementById("date-2");
 var date3 = document.getElementById("date-3");
@@ -48,16 +49,17 @@ date5.innerHTML = cDay + 5 + "-" + monthFormatted;
 var API_Key = "327d22c404609fdb5dc253861270307b";
 
 window.onload = function () {
+  city.innerHTML = "Minneapolis";
   console.log("annnoying");
-  var lat = [""];
+  var lat = [44.986656];
   localStorage.setItem("latitude", JSON.stringify(lat));
   var lat = JSON.parse(localStorage.getItem("latitude"));
   ///////////////////////////////////////////////////////
-  var lon = [""];
+  var lon = [-93.258133];
   localStorage.setItem("longitude", JSON.stringify(lon));
   var lon = JSON.parse(localStorage.getItem("longitude"));
   ///////////////////////////////////////////////////////
-  var cityname = [""];
+  var cityname = ["Minneapolis"];
   localStorage.setItem("City_Name", JSON.stringify(cityname));
   var cityname = JSON.parse(localStorage.getItem("City_Name"));
   console.log(localStorage);
@@ -66,6 +68,117 @@ window.onload = function () {
   localStorage.setItem("Text_Input", JSON.stringify(textInput));
   var cityname = JSON.parse(localStorage.getItem("Text_Input"));
   console.log(localStorage);
+  var staticInfo = JSON.parse(localStorage.City_Name);
+  console.log(staticInfo);
+  fetch(
+    "http://api.openweathermap.org/geo/1.0/direct?q=" +
+      staticInfo[0] +
+      "&limit=5&appid=" +
+      API_Key
+  )
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log("Lat and Lon \n----------");
+      console.log(data);
+      var lat = [data[0].lat];
+      localStorage.setItem("latitude", JSON.stringify(lat));
+      var lat = JSON.parse(localStorage.getItem("latitude"));
+      ///////////////////////////////////////////////////////
+      var lon = [data[0].lon];
+      localStorage.setItem("longitude", JSON.stringify(lon));
+      var lon = JSON.parse(localStorage.getItem("longitude"));
+      ///////////////////////////////////////////////////////
+      var cityname = [data[0].name];
+      localStorage.setItem("City_Name", JSON.stringify(cityname));
+      var cityname = JSON.parse(localStorage.getItem("City_Name"));
+      console.log(localStorage);
+      fetch(
+        "http://api.openweathermap.org/data/2.5/forecast?lat=" +
+          lat +
+          "&lon=" +
+          lon +
+          "&appid=" +
+          API_Key +
+          "&units=metric"
+      )
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          console.log("weather Data \n----------");
+          console.log(data.list);
+
+          var temp = data.list[0].main.temp;
+          var temp1 = data.list[1].main.temp;
+          var temp2 = data.list[2].main.temp;
+          var temp3 = data.list[3].main.temp;
+          var temp4 = data.list[4].main.temp;
+          var temp5 = data.list[5].main.temp;
+          tempEl.innerHTML = "Temp: " + temp + " C°";
+          temp1El.innerHTML = "Temp: " + temp1 + " C°";
+          temp2El.innerHTML = "Temp: " + temp2 + " C°";
+          temp3El.innerHTML = "Temp: " + temp3 + " C°";
+          temp4El.innerHTML = "Temp: " + temp4 + " C°";
+          temp5El.innerHTML = "Temp: " + temp5 + " C°";
+          var humidity = data.list[0].main.humidity;
+          var humidity1 = data.list[1].main.humidity;
+          var humidity2 = data.list[2].main.humidity;
+          var humidity3 = data.list[3].main.humidity;
+          var humidity4 = data.list[4].main.humidity;
+          var humidity5 = data.list[5].main.humidity;
+          humidityEl.innerHTML = "Humidity: " + humidity + " %";
+          humidity1El.innerHTML = "Humidity: " + humidity1 + " %";
+          humidity2El.innerHTML = "Humidity: " + humidity2 + " %";
+          humidity3El.innerHTML = "Humidity: " + humidity3 + " %";
+          humidity4El.innerHTML = "Humidity: " + humidity4 + " %";
+          humidity5El.innerHTML = "Humidity: " + humidity5 + " %";
+          var windSpeed = data.list[0].wind.speed;
+          var windSpeed1 = data.list[1].wind.speed;
+          var windSpeed2 = data.list[2].wind.speed;
+          var windSpeed3 = data.list[3].wind.speed;
+          var windSpeed4 = data.list[4].wind.speed;
+          var windSpeed5 = data.list[5].wind.speed;
+          windSpeedEl.innerHTML = "Wind Speed: " + windSpeed + " kmH";
+          windSpeed1El.innerHTML = "Wind Speed: " + windSpeed1 + " kmH";
+          windSpeed2El.innerHTML = "Wind Speed: " + windSpeed2 + " kmH";
+          windSpeed3El.innerHTML = "Wind Speed: " + windSpeed3 + " kmH";
+          windSpeed4El.innerHTML = "Wind Speed: " + windSpeed4 + " kmH";
+          windSpeed5El.innerHTML = "Wind Speed: " + windSpeed5 + " kmH";
+          var icon = data.list[0].weather[0].icon;
+          var icon1 = data.list[1].weather[0].icon;
+          var icon2 = data.list[2].weather[0].icon;
+          var icon3 = data.list[3].weather[0].icon;
+          var icon4 = data.list[4].weather[0].icon;
+          var icon5 = data.list[5].weather[0].icon;
+          console.log(icon1);
+          iconEl.setAttribute(
+            "src",
+            "http://openweathermap.org/img/wn/" + icon + "@2x.png"
+          );
+          iconEl1.setAttribute(
+            "src",
+            "http://openweathermap.org/img/wn/" + icon1 + "@2x.png"
+          );
+          iconEl2.setAttribute(
+            "src",
+            "http://openweathermap.org/img/wn/" + icon2 + "@2x.png"
+          );
+          iconEl3.setAttribute(
+            "src",
+            "http://openweathermap.org/img/wn/" + icon3 + "@2x.png"
+          );
+          iconEl4.setAttribute(
+            "src",
+            "http://openweathermap.org/img/wn/" + icon4 + "@2x.png"
+          );
+          iconEl5.setAttribute(
+            "src",
+            "http://openweathermap.org/img/wn/" + icon5 + "@2x.png"
+          );
+        });
+    });
 };
 
 function theMove() {
@@ -117,6 +230,7 @@ function theMove() {
         .then(function (data) {
           console.log("weather Data \n----------");
           console.log(data.list);
+
           var temp = data.list[0].main.temp;
           var temp1 = data.list[1].main.temp;
           var temp2 = data.list[2].main.temp;
@@ -188,6 +302,7 @@ function theMove() {
           var cityName = JSON.parse(localStorage.City_Name);
           city.innerHTML = cityName[0];
           for (let i = 0; i < 1; i++) {
+            deleteBtnPos.style.marginTop = "190px";
             var ul = document.createElement("ul");
             var li = document.createElement("li");
             var btn = document.createElement("button");

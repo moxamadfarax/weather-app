@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400&display=swap");
 body {
-  background-image: url(/images/weather1.jpg);
+  background-image: url(/assets/images/weather.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   font-family: "Barlow", sans-serif;
@@ -35,19 +34,18 @@ input {
   height: 34px;
   width: 250px;
 }
+
 .city-btn {
   background-color: rgb(117, 134, 139);
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px;
   height: 34px;
   width: 250px;
+  margin-bottom: 10px;
 }
 .city-btn:hover {
   background-color: rgb(99, 121, 129);
   cursor: pointer;
-  border-radius: 0px;
-  height: 34px;
-  width: 250px;
 }
 .container {
   display: flex;
@@ -56,18 +54,25 @@ input {
   flex-direction: row;
 }
 .delete-btn {
-  background-color: rgb(218, 54, 54);
-  border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
-  width: 15px;
-  height: 33.6px;
+  margin-left: -331px;
+  display: block;
+  position: fixed;
+  background-color: rgb(228, 86, 51);
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  height: 34px;
+  width: 250px;
+  margin-bottom: 10px;
 }
+.history-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .delete-btn:hover {
-  background-color: rgb(155, 61, 61);
-  width: 15px;
-  height: 33.5px;
+  background-color: rgba(228, 51, 51, 0.747);
   cursor: pointer;
-  border-radius: 0px, 0px, 0px 10px;
 }
 ul {
   align-content: center;
@@ -114,4 +119,6 @@ ul {
   margin: 20px;
   height: 450px;
   width: 350px;
+}
+.hidden {
 }
