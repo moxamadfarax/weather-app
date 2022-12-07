@@ -121,4 +121,5 @@ ul {
   width: 350px;
 }
 .hidden {
+  display: none;
 }
