@@ -3,7 +3,6 @@ var inputField = document.getElementById("input");
 var submitBtn = document.getElementById("submit-btn");
 var historylist = document.getElementById("history-list");
 var currentDateEl = document.getElementById("current-date");
-var deleteBtnPos = document.getElementById("delete-btn-pst");
 var date1 = document.getElementById("date-1");
 var date2 = document.getElementById("date-2");
 var date3 = document.getElementById("date-3");
@@ -302,7 +301,6 @@ function theMove() {
           var cityName = JSON.parse(localStorage.City_Name);
           city.innerHTML = cityName[0];
           for (let i = 0; i < 1; i++) {
-            deleteBtnPos.style.marginTop = "190px";
             var ul = document.createElement("ul");
             var li = document.createElement("li");
             var btn = document.createElement("button");
@@ -318,6 +316,17 @@ function theMove() {
             var newLi = document.getElementById("new-listEl");
             var cityName = JSON.parse(localStorage.City_Name);
             btn.innerHTML = cityName[0];
+            var deleteBtn = document.querySelector(".delete-btn");
+            var historylistElements = document.querySelectorAll(".city-btn");
+            console.log(historylistElements.length);
+            if (historylistElements.length === 5) {
+              submitBtn.disabled = true;
+            }
+
+            deleteBtn.addEventListener("click", function () {
+              ul.remove();
+              submitBtn.disabled = false;
+            });
           }
         });
     });
