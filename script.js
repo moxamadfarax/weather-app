@@ -70,7 +70,7 @@ window.onload = function () {
   var staticInfo = JSON.parse(localStorage.City_Name);
   console.log(staticInfo);
   fetch(
-    "http://api.openweathermap.org/geo/1.0/direct?q=" +
+    "https://api.openweathermap.org/geo/1.0/direct?q=" +
       staticInfo[0] +
       "&limit=5&appid=" +
       API_Key
@@ -94,7 +94,7 @@ window.onload = function () {
       var cityname = JSON.parse(localStorage.getItem("City_Name"));
       console.log(localStorage);
       fetch(
-        "http://api.openweathermap.org/data/2.5/forecast?lat=" +
+        "https://api.openweathermap.org/data/2.5/forecast?lat=" +
           lat +
           "&lon=" +
           lon +
