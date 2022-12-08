@@ -10,6 +10,9 @@ I learned how to fetch and store data using pull requests.
 This app allows you to view the weather forecast of the city you enter.
 
 My code is quite messy because I did not have a lot of free time to focus on cleaning
-up this challenge, what with the project and all. It is working fine in my own live server or default browser, but the js does not work in github pages.
+up this challenge, what with the project and all.
+
+Input the city you would like to search and press the enter button. The current weather for the city, and it's future five day forecast will display. The city you have entered will be saved in the history list underneath the enter button. You can click the cities in the history list to regenerate the city's forecast that you had previously inputted.
+Press the clear history button to clear the history.
 
 ![Getting Started](images/screenshot.png)
