@@ -154,27 +154,27 @@ window.onload = function () {
           console.log(icon1);
           iconEl.setAttribute(
             "src",
-            "http://openweathermap.org/img/wn/" + icon + "@2x.png"
+            "https://openweathermap.org/img/wn/" + icon + "@2x.png"
           );
           iconEl1.setAttribute(
             "src",
-            "http://openweathermap.org/img/wn/" + icon1 + "@2x.png"
+            "https://openweathermap.org/img/wn/" + icon1 + "@2x.png"
           );
           iconEl2.setAttribute(
             "src",
-            "http://openweathermap.org/img/wn/" + icon2 + "@2x.png"
+            "https://openweathermap.org/img/wn/" + icon2 + "@2x.png"
           );
           iconEl3.setAttribute(
             "src",
-            "http://openweathermap.org/img/wn/" + icon3 + "@2x.png"
+            "https://openweathermap.org/img/wn/" + icon3 + "@2x.png"
           );
           iconEl4.setAttribute(
             "src",
-            "http://openweathermap.org/img/wn/" + icon4 + "@2x.png"
+            "https://openweathermap.org/img/wn/" + icon4 + "@2x.png"
           );
           iconEl5.setAttribute(
             "src",
-            "http://openweathermap.org/img/wn/" + icon5 + "@2x.png"
+            "https://openweathermap.org/img/wn/" + icon5 + "@2x.png"
           );
         });
     });
@@ -189,7 +189,7 @@ function theMove() {
   var textInput = JSON.parse(localStorage.Text_Input);
   console.log(textInput[0]);
   fetch(
-    "http://api.openweathermap.org/geo/1.0/direct?q=" +
+    "https://api.openweathermap.org/geo/1.0/direct?q=" +
       JSON.parse(localStorage.Text_Input)[0] +
       "&limit=5&appid=" +
       API_Key
@@ -214,7 +214,7 @@ function theMove() {
       var cityname = JSON.parse(localStorage.getItem("City_Name"));
       console.log(localStorage);
       fetch(
-        "http://api.openweathermap.org/data/2.5/forecast?lat=" +
+        "https://api.openweathermap.org/data/2.5/forecast?lat=" +
           lat +
           "&lon=" +
           lon +
@@ -274,27 +274,27 @@ function theMove() {
           console.log(icon1);
           iconEl.setAttribute(
             "src",
-            "http://openweathermap.org/img/wn/" + icon + "@2x.png"
+            "https://openweathermap.org/img/wn/" + icon + "@2x.png"
           );
           iconEl1.setAttribute(
             "src",
-            "http://openweathermap.org/img/wn/" + icon1 + "@2x.png"
+            "https://openweathermap.org/img/wn/" + icon1 + "@2x.png"
           );
           iconEl2.setAttribute(
             "src",
-            "http://openweathermap.org/img/wn/" + icon2 + "@2x.png"
+            "https://openweathermap.org/img/wn/" + icon2 + "@2x.png"
           );
           iconEl3.setAttribute(
             "src",
-            "http://openweathermap.org/img/wn/" + icon3 + "@2x.png"
+            "https://openweathermap.org/img/wn/" + icon3 + "@2x.png"
           );
           iconEl4.setAttribute(
             "src",
-            "http://openweathermap.org/img/wn/" + icon4 + "@2x.png"
+            "https://openweathermap.org/img/wn/" + icon4 + "@2x.png"
           );
           iconEl5.setAttribute(
             "src",
-            "http://openweathermap.org/img/wn/" + icon5 + "@2x.png"
+            "https://openweathermap.org/img/wn/" + icon5 + "@2x.png"
           );
 
           var cityName = JSON.parse(localStorage.City_Name);
@@ -323,7 +323,7 @@ function theMove() {
             }
             btn.addEventListener("click", function () {
               fetch(
-                "http://api.openweathermap.org/geo/1.0/direct?q=" +
+                "https://api.openweathermap.org/geo/1.0/direct?q=" +
                   btn.innerHTML +
                   "&limit=5&appid=" +
                   API_Key
@@ -349,7 +349,7 @@ function theMove() {
                   var cityname = JSON.parse(localStorage.getItem("City_Name"));
                   console.log(localStorage);
                   fetch(
-                    "http://api.openweathermap.org/data/2.5/forecast?lat=" +
+                    "https://api.openweathermap.org/data/2.5/forecast?lat=" +
                       lat +
                       "&lon=" +
                       lon +
@@ -414,27 +414,27 @@ function theMove() {
                       console.log(icon1);
                       iconEl.setAttribute(
                         "src",
-                        "http://openweathermap.org/img/wn/" + icon + "@2x.png"
+                        "https://openweathermap.org/img/wn/" + icon + "@2x.png"
                       );
                       iconEl1.setAttribute(
                         "src",
-                        "http://openweathermap.org/img/wn/" + icon1 + "@2x.png"
+                        "https://openweathermap.org/img/wn/" + icon1 + "@2x.png"
                       );
                       iconEl2.setAttribute(
                         "src",
-                        "http://openweathermap.org/img/wn/" + icon2 + "@2x.png"
+                        "https://openweathermap.org/img/wn/" + icon2 + "@2x.png"
                       );
                       iconEl3.setAttribute(
                         "src",
-                        "http://openweathermap.org/img/wn/" + icon3 + "@2x.png"
+                        "https://openweathermap.org/img/wn/" + icon3 + "@2x.png"
                       );
                       iconEl4.setAttribute(
                         "src",
-                        "http://openweathermap.org/img/wn/" + icon4 + "@2x.png"
+                        "https://openweathermap.org/img/wn/" + icon4 + "@2x.png"
                       );
                       iconEl5.setAttribute(
                         "src",
-                        "http://openweathermap.org/img/wn/" + icon5 + "@2x.png"
+                        "https://openweathermap.org/img/wn/" + icon5 + "@2x.png"
                       );
                     });
                 });
